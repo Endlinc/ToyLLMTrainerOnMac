@@ -3,7 +3,7 @@ A lightweight project for fine-tuning small LLMs with LoRA and running inference
 
 
 ## 1. Technical Specification  
-All training runs are optimized for **Apple M3 Max chips with 48GB on-chip memory**.
+All training runs are optimized for **Apple M4 Max chips with 48GB on-chip memory**.
 
 
 ## 2. Prerequisites  
