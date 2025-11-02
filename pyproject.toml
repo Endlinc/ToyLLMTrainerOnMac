@@ -1,0 +1,20 @@
+[project]
+name = "toyllmtraineronmac"
+version = "0.1.0"
+description = "A lightweight tool for training toy-level LLMs (Large Language Models) on the Mac platform, ideal for beginners to learn or quick demos."
+authors = [
+    {name = "ming",email = "parasolohalo@gmail.com"}
+]
+license = {text = "MIT License"}
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "mlx-lm (>=0.28.3,<0.29.0)",
+    "huggingface-hub[cli] (<1.0)",
+    "datasets (>=4.3.0,<5.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

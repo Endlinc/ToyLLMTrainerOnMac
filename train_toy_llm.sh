@@ -1,0 +1,1 @@
+ mlx_lm.lora --model mistralai/Mistral-7B-v0.1 --train --batch-size 1 --num-layers 4 --data mlx-community/wikisql
