@@ -1,1 +1,1 @@
- mlx_lm.lora --model mistralai/Mistral-7B-v0.1 --train --batch-size 1 --num-layers 4 --data mlx-community/wikisql
+ mlx_lm.lora --model mistralai/Mistral-7B-v0.1 --train --batch-size 2 --num-layers 8 --data mlx-community/wikisql --iters 100000 --save-every 100001
