@@ -1,7 +1,7 @@
 [project]
-name = "toyllmtraineronmac"
+name = "toyllmtrainer"
 version = "0.1.0"
-description = "A lightweight tool for training toy-level LLMs (Large Language Models) on the Mac platform, ideal for beginners to learn or quick demos."
+description = "A lightweight tool for training toy-level LLMs, supports Mac (MLX) and Linux (CUDA 12.6), ideal for beginners to learn or quick demos."
 authors = [
     {name = "ming",email = "parasolohalo@gmail.com"}
 ]
@@ -12,7 +12,6 @@ dependencies = [
     "mlx-lm (>=0.28.3,<0.29.0)",
     "huggingface-hub[cli] (<1.0)",
     "datasets (>=4.3.0,<5.0.0)",
-    "poetry (>=2.3.4,<3.0.0)",
     "trl (>=1.2.0,<2.0.0)",
     "torch (>=2.6.0,<3.0.0)",
 ]
@@ -22,6 +21,7 @@ dependencies = [
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+# PyPI 镜像（加速安装）
 [[tool.poetry.source]]
 name = "bfsu"
 url = "https://mirrors.bfsu.edu.cn/pypi/web/simple/"
@@ -29,10 +29,11 @@ priority = "primary"
 
 
 [[tool.poetry.source]]
-name = "pytorch-cu124"
-url = "https://download.pytorch.org/whl/cu124"
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
 priority = "explicit"
 
-
+# 绑定 PyTorch 到 CUDA 12.6 源
 [tool.poetry.dependencies]
-torch = {source = "pytorch-cu124"}
+python = ">=3.10,<4.0"
+torch = {source = "pytorch-cu126"}
