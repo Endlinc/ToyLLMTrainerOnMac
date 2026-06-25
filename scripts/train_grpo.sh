@@ -1,1 +1,1 @@
-accelerate launch scr/train_grpo.py
+accelerate launch src/train_grpo.py
